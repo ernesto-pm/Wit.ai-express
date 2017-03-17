@@ -1,23 +1,5 @@
 'use strict';
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const server = require('http').Server(app);
-
-
-app.use(bodyParser.json());
-
-app.post('/chat',function(req,res){
-  //res.send({msg: "hola que tal"});
-
-});
-
-server.listen(3000, function(){
-  console.log('Bot running at port 3000');
-  client.runActions();
-})
-
 
 let Wit = null;
 let interactive = null;
@@ -74,4 +56,4 @@ const actions = {
 
 
 const client = new Wit({accessToken, actions});
-//interactive(client);
+interactive(client);
